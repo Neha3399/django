@@ -1,0 +1,27 @@
+
+{% extends 'index1.html' %}
+
+
+{% block content %}
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">sl no</th>
+      <th scope="col">title</th>
+      <th scope="col">discription</th>
+      <th scope="col">date</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for i in data %}
+    <tr>
+      <th scope="row">{{forloop.counter}}</th>
+      <td>{{i.title}}</td>
+      <td>{{i.discription}}</td>
+      <td>{{i.date}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+    {% endblock %}
